@@ -1,0 +1,29 @@
+---
+- vagrant_box_host: "vg-lxd-01"
+  vagrant_box: "bento/centos-7.7"
+  vbox_name: "vbox-lxd-01"
+  vbox_ram: 512
+  vbox_cpu: 2
+  network_type: "private_network"
+  vagrant_box_ip: 192.168.18.82
+  guest_port: 80
+  host_port: 882
+  # storage_bootstrap: "provisioning/storage_list.yml"
+  server_bootstrap: "provisioning/deploy.yml"
+  ansible_version: "2.9.2"
+  ansible_compatibility_mode: "2.0"
+
+
+- vagrant_box_host: "vg-lxd-02"
+  vagrant_box: "bento/ubuntu-19.04"
+  vbox_name: "vbox-lxd-02"
+  vbox_ram: 512
+  vbox_cpu: 2
+  network_type: "private_network"
+  vagrant_box_ip: 192.168.18.83
+  guest_port: 80
+  host_port: 883
+  # storage_bootstrap: "provisioning/storage_list.yml"
+  server_bootstrap: "provisioning/deploy.yml"
+  ansible_version: "2.9.2"
+  ansible_compatibility_mode: "2.0"
